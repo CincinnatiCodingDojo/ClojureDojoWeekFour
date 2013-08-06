@@ -13,6 +13,9 @@
 	(= (- (count hand) 1)
 	   (count (into #{} (get-values-from-hand hand)))))
 
+(defn find-two-pair [hand]
+	(lazy-contains? (group-by identity (map count (vals (group-by get-rank hand))))2)
+	)
 (defn find-three-of-a-kind [hand]
 	 (lazy-contains?  (map count (vals (group-by get-rank hand))) 3))
 

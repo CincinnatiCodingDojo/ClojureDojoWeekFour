@@ -26,3 +26,10 @@
 	(is (= true (find-three-of-a-kind ["3C" "3D" "5C" "3H" "AH"])))
 	(is (= false (find-three-of-a-kind ["3C" "3D" "5C" "5H" "AH"])))
 	)
+
+
+(deftest can-find-two-pair
+	(is (= false (find-two-pair ["3C" "4C" "5C" "3H" "AH"])))
+	(is (= false (find-two-pair ["3C" "3D" "5C" "3H" "AH"])))
+	(is (= true (find-two-pair ["3C" "3D" "5C" "5H" "AH"])))
+	)
